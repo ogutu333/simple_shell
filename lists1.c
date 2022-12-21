@@ -29,7 +29,7 @@ char **list_to_strings(list_t *head)
 	list_t *node = head;
 	size_t i = list_len(head), j;
 	char **strs;
-	char **str;
+	char *str;
 
 	if (!head || !i)
 		return (NULL);
@@ -42,7 +42,7 @@ char **list_to_strings(list_t *head)
 		if (!str)
 		{
 			for (j = 0; j < i; j++)
-				free(strs[j]);
+				free(strs);
 			free(strs);
 			return (NULL);
 		}
@@ -50,7 +50,7 @@ char **list_to_strings(list_t *head)
 		str = _strcpy(str, node->str);
 		strs[i] = str;
 	}
-	strs[i] = NULL;
+	strs[i] = '\0';
 	return (strs);
 }
 
