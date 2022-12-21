@@ -139,6 +139,6 @@ int renumber_history(info_t *info)
 		node->num = i++;
 		node = node->next;
 	}
-	_puts("'\n");
+	_putchar("\n");
 	return (info->histcount = i);
 }

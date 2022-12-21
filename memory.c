@@ -14,6 +14,6 @@ int bfree(void **ptr)
 		*ptr = NULL;
 		return (1);
 	}
-	_puts("'\n");
+	_putchar("\n");
 	return (0);
 }

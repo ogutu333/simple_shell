@@ -81,6 +81,6 @@ int _putsfd(char *str, int fd)
 	{
 		i += _putfd(*str++, fd);
 	}
-	_puts("'\n");
+	_putchar("\n");
 	return (i);
 }
